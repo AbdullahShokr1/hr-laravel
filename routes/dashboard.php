@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Dashboard\AdminsController;
+use App\Http\Controllers\Dashboard\CategoryController;
+use App\Http\Controllers\Dashboard\PostController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Dashboard\UsersController;
 /*
@@ -19,6 +21,8 @@ Route::namespace("Dashboard")->prefix("dashboard")->name("dashboard.")->group(fu
         Route::get("/","DashboardController@index")->name('home');
         Route::resource("users",UsersController::class);
         Route::resource("admins",AdminsController::class);
+        Route::resource('category', CategoryController::class);
+        Route::resource('posts', PostController::class);
         Route::get("contact","ContactController@show")->name('mycontact');
         Route::get("contact/{id}","ContactController@showdetial")->name('showmessg');
         Route::get("contact/delete/{id}","ContactController@destroy")->name('delcontact');
@@ -32,6 +36,7 @@ Route::namespace("Dashboard")->group(function(){
         Route::get("/contact","ContactController@index")->name('contact');
         Route::post("/contact","ContactController@store")->name('sendcontact');
 });
+
 require __DIR__.'/admin.php';
 
 
