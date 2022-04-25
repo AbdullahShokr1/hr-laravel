@@ -14,7 +14,6 @@ class Candidate extends Model
         'email',
         'phone',
         'job',
-        'cv',
-        'comment',
+        'skills',
     ];
 }

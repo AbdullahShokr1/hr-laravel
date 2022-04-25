@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('title');
             $table->text('description');
             $table->string('keywords');
-            $table->text('content');
+            $table->string('content');
             $table->foreignId('category_id');
             $table->foreignId('writer_id');
             $table->string('telephone');

@@ -19,8 +19,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('phone');
             $table->string('job');
-            $table->string('cv');
-            $table->string('comment')->nullable();
+            $table->string('skills');
             $table->timestamps();
         });
     }

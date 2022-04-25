@@ -156,7 +156,8 @@
                                     @csrf
 
                                     <div class="form-group" dir='rtl'>
-                                        <textarea class="form-control tinymce" name='content' id="content" placeholder="المقالة">{{old('content')}}</textarea>
+                                        <input type="text" class="form-control" name='content' value="{{old('content')}}" id="title" placeholder="Enter content">
+{{--                                        <textarea class="form-control tinymce" name='content' id="content" placeholder="المقالة">{{old('content')}}</textarea>--}}
                                         @error('content')
                                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -249,19 +250,7 @@
                                         <section class="main-photo">
                                             <div class="ml-2 col-sm-12" dir="ltr">
                                                 <input type="file" name="photo" value="{{old('photo')}}" class="file" >
-                                                <div class="input-group my-3">
-                                                    <label for="photo">Add Main Post Photo</label>
-                                                    <br/>
-                                                    <input type="text" name='photo' value="{{old('photo')}}" class="form-control" disabled placeholder="Upload File" id="file">
-                                                    <div class="input-group-append">
-                                                        <button type="button" class="browse btn btn-primary">Browse...</button>
-                                                    </div>
-                                                </div>
                                             </div>
-                                            <div class="ml-2 col-sm-12">
-                                                <img src="" id="preview" class="img-thumbnail">
-                                            </div>
-
                                         </section>
                                     </section>
                                     <div class="card-action">

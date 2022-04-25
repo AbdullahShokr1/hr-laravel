@@ -28,8 +28,7 @@ class CandidateRequest extends FormRequest
             'email' => 'required|email|max:255|',
             'phone' => 'required',
             'job' => 'required|string|max:50',
-            'cv' => 'required',
-            'comment' => 'nullable|string|max:700',
+            'skills' => 'required|string|max:700',
         ];
     }
 }

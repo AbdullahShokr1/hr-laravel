@@ -27,7 +27,7 @@ class CreateUsersSeeder extends Seeder
             [
                 'name'=>'Asmaa',
                 'email'=>'Asmaa@gmail.com',
-                'password'=> 'Asmaa2000',
+                'password'=>'Asmaa2000',
             ],
         ];
         foreach ($Admin as $key => $value) {

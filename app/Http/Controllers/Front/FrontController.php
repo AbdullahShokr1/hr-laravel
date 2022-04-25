@@ -3,12 +3,17 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Models\Job;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Session;
 
 class FrontController extends Controller
 {
     public function index(){
-        return view('front.home');
+        return view('front.home',[
+            'jobs' =>Job::latest()->get(),
+            ]);
     }
     public function show(){
         return view('welcome');
@@ -19,4 +24,5 @@ class FrontController extends Controller
     public function gallery(){
         return view('front.gallery');
     }
+
 }

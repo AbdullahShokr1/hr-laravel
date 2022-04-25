@@ -39,7 +39,6 @@ class PostController extends Controller
             'description' => $request -> description,
             'keywords' => $request -> keywords,
             'content' => $request -> contentt,
-            'schema' => $request -> schema,
             'category_id' => $request -> category_id,
             'writer_id' => $request -> writer_id,
             'telephone' => $request -> telephone,
