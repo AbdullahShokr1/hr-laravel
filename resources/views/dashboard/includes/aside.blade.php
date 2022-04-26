@@ -62,6 +62,14 @@
                 <span class="menu-title">Jobs</span>
             </a>
         </li>
+        <li class="nav-item menu-items active">
+            <a class="nav-link" href="{{route('dashboard.my-hire')}}">
+              <span class="menu-icon">
+                <i class="mdi mdi-playlist-play"></i>
+              </span>
+                <span class="menu-title">Hiring Employees</span>
+            </a>
+        </li>
         <li class="nav-item menu-items">
             <a class="nav-link" href="{{route('dashboard.admins.index')}}">
               <span class="menu-icon">

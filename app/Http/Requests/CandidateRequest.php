@@ -24,11 +24,13 @@ class CandidateRequest extends FormRequest
     public function rules()
     {
         return [
+            'nid' => 'required|min:14|max:14',
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255|',
             'phone' => 'required',
             'job' => 'required|string|max:50',
             'skills' => 'required|string|max:700',
+            'cv' => 'required',
         ];
     }
 }

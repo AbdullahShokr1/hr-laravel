@@ -21,30 +21,28 @@
                                 <table class="table table-dark">
                                     <thead>
                                     <tr>
-                                        <th> ID </th>
                                         <th> Name </th>
                                         <th> Email </th>
                                         <th> Phone </th>
+                                        <th> Number of Employees </th>
                                         <th> Job </th>
-                                        <th> CV </th>
-                                        <th> skills </th>
+                                        <th> Message</th>
                                         <th> Delete</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    @foreach($candidates as $candidate)
+                                    @foreach($hires as $hire)
                                         <tr>
-                                            <td> {{$candidate->nid}} </td>
-                                            <td> {{$candidate->name}} </td>
-                                            <td> {{$candidate->email}} </td>
-                                            <td> {{$candidate->phone}} </td>
-                                            <td> {{$candidate->job}} </td>
+                                            <td> {{$hire->name}} </td>
+                                            <td> {{$hire->email}} </td>
+                                            <td> {{$hire->phone}} </td>
+                                            <td> {{$hire->number}} </td>
+                                            <td> {{$hire->job}} </td>
                                             <td>
-                                                <a type="button" class="btn btn-inverse-success btn-fw" href="{{URL::asset('candidate/'.$candidate->cv)}}">Download CV</a>
+                                                <a class="btn btn-inverse-info btn-fw" href="{{route('dashboard.show-hire',$hire->id)}}')}}">More Details</a>
                                             </td>
-                                            <td> {{$candidate->skills}} </td>
                                             <td>
-                                                <a class="del btn btn-danger" href="{{ route('dashboard.delcandidate',$candidate->id) }}">
+                                                <a class="del btn btn-danger" href="{{ route('dashboard.del-hire',$hire->id) }}">
                                                     <button class="btn btn-danger btn-fw" >Delete</button>
                                                 </a>
                                             </td>

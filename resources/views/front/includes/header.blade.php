@@ -147,8 +147,9 @@
                     <!-- eof .header_left_logo -->
                 </div>
             </div>
-            <div class="col-lg-4">
-                <button class="btn-outline-darkgrey  d-none d-lg-block">Looking for Staff?</button>
+            <div class="col-lg-4" style="display: flex;flex-direction: row-reverse; margin-left: -110px;height: 69px;">
+                <a class="btn-outline-darkgrey  d-none d-lg-block" style="margin-left:-1px;width:120px;"href="{{route('hire')}}">Looking for Staff?</a>
+                <a class="btn-outline-darkgrey  d-none d-lg-block" href="{{route('candidate')}}">Looking for Job?</a>
             </div>
         </div>
     </div>
@@ -181,9 +182,10 @@
                             </li>
                             <li>
                                 <a href="{{route('contact')}}">{{__('nav.contact')}}</a>
-
                             </li>
-
+                            <li>
+                                <a href="{{route('hire')}}">{{__('nav.hire')}}</a>
+                            </li>
                         </ul>
 
 

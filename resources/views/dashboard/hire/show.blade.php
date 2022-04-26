@@ -21,35 +21,22 @@
                                 <table class="table table-dark">
                                     <thead>
                                     <tr>
-                                        <th> ID </th>
                                         <th> Name </th>
                                         <th> Email </th>
                                         <th> Phone </th>
-                                        <th> Job </th>
-                                        <th> CV </th>
-                                        <th> skills </th>
-                                        <th> Delete</th>
+                                        <th> Subject </th>
+                                        <th> Message</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    @foreach($candidates as $candidate)
-                                        <tr>
-                                            <td> {{$candidate->nid}} </td>
-                                            <td> {{$candidate->name}} </td>
-                                            <td> {{$candidate->email}} </td>
-                                            <td> {{$candidate->phone}} </td>
-                                            <td> {{$candidate->job}} </td>
-                                            <td>
-                                                <a type="button" class="btn btn-inverse-success btn-fw" href="{{URL::asset('candidate/'.$candidate->cv)}}">Download CV</a>
-                                            </td>
-                                            <td> {{$candidate->skills}} </td>
-                                            <td>
-                                                <a class="del btn btn-danger" href="{{ route('dashboard.delcandidate',$candidate->id) }}">
-                                                    <button class="btn btn-danger btn-fw" >Delete</button>
-                                                </a>
-                                            </td>
-                                        </tr>
-                                    @endforeach
+                                    <tr>
+                                        <td> {{$hire->name}} </td>
+                                        <td> {{$hire->email}} </td>
+                                        <td> {{$hire->phone}} </td>
+                                        <td> {{$hire->number}} </td>
+                                        <td> {{$hire->job}} </td>
+                                        <td> {{$hire->message}}</td>
+                                    </tr>
                                     </tbody>
                                 </table>
                             </div>

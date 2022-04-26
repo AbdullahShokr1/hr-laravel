@@ -17,5 +17,6 @@ return [
     'about' => 'About Us',
     'candidate' => 'Candidates',
     'contact' => 'Contacts',
+    "hire"=>'Hiring Employees',
 
 ];

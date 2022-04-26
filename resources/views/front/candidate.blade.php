@@ -41,22 +41,57 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-6">
                             <div class="col-c-mb-60 form-group has-placeholder">
+                                <label for="name">National ID
+                                    <span class="required">*</span>
+                                </label>
+                                <input type="text" aria-required="true" size="200" value="{{old('nid')}}" name="nid" id="nid" class="form-control" placeholder="National ID">
+                                @error('nid')
+                                <div class="error-validation">
+                                    <div class="alert alert-danger" role="alert">
+                                        <h4 class="alert-heading">{{$message}}!</h4>
+                                    </div>
+                                </div>
+                                @enderror
+
+                            </div>
+                            <div class="col-c-mb-60 form-group has-placeholder">
                                 <label for="name">Full Name
                                     <span class="required">*</span>
                                 </label>
                                 <input type="text" aria-required="true" size="200" value="{{old('name')}}" name="name" id="name" class="form-control" placeholder="Full Name">
+                                @error('name')
+                                <div class="error-validation">
+                                    <div class="alert alert-danger" role="alert">
+                                        <h4 class="alert-heading">{{$message}}!</h4>
+                                    </div>
+                                </div>
+                                @enderror
                             </div>
                             <div class="col-c-mb-60 form-group has-placeholder">
                                 <label for="text">Phone number
                                     <span class="required">*</span>
                                 </label>
                                 <input type="text" aria-required="true" size="200" value="{{old('phone')}}" name="phone" id="text" class="form-control" placeholder="Phone number">
+                                @error('phone')
+                                <div class="error-validation">
+                                    <div class="alert alert-danger" role="alert">
+                                        <h4 class="alert-heading">{{$message}}!</h4>
+                                    </div>
+                                </div>
+                                @enderror
                             </div>
                             <div class="col-c-mb-60 form-group has-placeholder">
                                 <label for="email">Email address
                                     <span class="required">*</span>
                                 </label>
                                 <input type="email" aria-required="true" size="200" value="{{old('email')}}" name="email" id="email" class="form-control" placeholder="Email address">
+                                @error('email')
+                                <div class="error-validation">
+                                    <div class="alert alert-danger" role="alert">
+                                        <h4 class="alert-heading">{{$message}}!</h4>
+                                    </div>
+                                </div>
+                                @enderror
                             </div>
                             <div class="row">
                                 <div class="col-sm-6">
@@ -70,15 +105,30 @@
                                     </div>
                                 </div>
                             </div>
-                            @error('writer_id')
-                            {{$message}}
+                            @error('job')
+                            <div class="error-validation">
+                                <div class="alert alert-danger" role="alert">
+                                    <h4 class="alert-heading">{{$message}}!</h4>
+                                </div>
+                            </div>
                             @enderror
                         </div>
                         <div class="col-xs-12 col-sm-6">
                             <div class="form-group has-placeholder">
                                 <label for="message">skills</label>
                                 <textarea aria-required="true" rows="6" cols="40" name="skills" id="skills" class="form-control" placeholder="skills">{{old('skills')}}</textarea>
+                                @error('skills')
+                                <div class="error-validation">
+                                    <div class="alert alert-danger" role="alert">
+                                        <h4 class="alert-heading">{{$message}}!</h4>
+                                    </div>
+                                </div>
+                                @enderror
                             </div>
+                        </div>
+                        <div class="col-c-mb-60 form-group">
+                            <input type="file" value="{{old('cv')}}" name="cv" class="custom-file-input button" id="validatedCustomFile">
+                            <label class="custom-file-label" for="validatedCustomFile">Attach CV</label>
                         </div>
                     </div>
                     <div class="row mt-1">
